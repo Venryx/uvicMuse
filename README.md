@@ -1,5 +1,5 @@
 
-# UVic MUSE
+# uvicMuse
 
 An application for streaming from MUSE headsets to MATLAB and other 
 platforms. 
@@ -10,8 +10,6 @@ The code relies on [pygatt](https://github.com/peplin/pygatt) for BLE communicat
     and [pylsl](https://github.com/chkothe/pylsl) for Muse streaming. For the best result use [BLED112](http://www.farnell.com/datasheets/2674198.pdf?_ga=2.79024144.587051681.1584504877-1039421750.1584504877&_gac=1.255907449.1584504893.Cj0KCQjw6sHzBRCbARIsAF8FMpWVas72rjYW8HkIbpjfUe97CBonZR71Yi22iGbSvDSER9rcJJ1JbqsaAit0EALw_wcB).
 We highly recommend installing on a virtual environment (VE). You can build and manage those VEs using [Anaconda](https://www.anaconda.com/), 
         the instructions to install and setup a conda environment is described [here](https://docs.anaconda.com/anaconda/install/).
-
-
 
 **Compatible with Python 3.x**
 
@@ -29,14 +27,14 @@ Take a look at this chart below:
 
 ![Top](image.png)
 
-This project has two sections, first, *UVic MUSE* that connects to MUSE 
+This project has two sections, first, *uvicMuse* that connects to MUSE 
 over Bluetooth and streams its data over UDP and LSL.
 Second, a MATLAB toolbox (and `MuseUdp.m`) that allows the user to receive 
-*UVic MUSE* transmitted data over UDP protocol. 
-In the following sections we go through installation and usage of *UVic MUSE*
+*uvicMuse* transmitted data over UDP protocol. 
+In the following sections we go through installation and usage of *uvicMuseE*
 and then explain about part two, MuseUdp.   
 
-### UVic MUSE Installation
+### uvicMuse Installation
 
 On Windows we suggest the user to install Anaconda and run all of the following commands
 (including optional commands) in an Anaconda Prompt. You may need to install
@@ -69,16 +67,16 @@ Install UVicMUSE using `pip`
 
 
     
-#### Running UVicMUSE:
+#### Running uvicMuse:
 
-To run and use *UVic MUSE* open a Terminal (Linux & OSx) or Command Prompt (Windows)
+To run and use *uvicMuse* open a Terminal (Linux & OSx) or Command Prompt (Windows)
 and type in the commands below:
 
 (optional) Activate the virtual environment
     
     conda activate muse_env
 
-Run UVicMUSE:
+Run uvicMuse:
     
     uvicmuse
     
@@ -118,7 +116,7 @@ To see all of the available methods (functions), create an object from MuseUdp a
     mu = MuseUdp();
     methods(mu);
 
-To get a single sample from UVic MUSE use:
+To get a single sample from uvicMuse use:
     
     mu = MuseUdp();
     [data, timestamp, success] = mu.get_xxx_sample()
@@ -143,12 +141,12 @@ On MacOSx: Application crashes after running:
     conda uninstall serial pyserial
     pip install pyserial esptool
 
-## Citing UVicMUSE
+## Citing uvicMuse
 
 ```
-@misc{UVicMUSE,
-  author       = {Bardia Barabadi, Jamieson Fregeau},
-  title        = {uvic-muse},
+@misc{uvicMuse,
+  author       = {Bardia Barabadi, Jamieson Fregeau, Olave E. Krigolson},
+  title        = {uvicMuse},
   month        = March,
   year         = 2020,
 }
